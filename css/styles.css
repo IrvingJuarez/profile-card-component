@@ -20,30 +20,33 @@ html {
 body {
   min-width: 375px;
   background-color: var(--color-dark-cyan);
-  /* background-image: url(../images/bg-pattern-top.svg),
-    url(../images/bg-pattern-bottom.svg);
-  background-size: contain;
-  background-position: top, bottom;
-  background-repeat: no-repeat;
-  background-position-x: -453px, 200px;
-  background-position-y: -435px, 315px; */
 }
 
 /* MAIN */
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
 
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 330px;
+  justify-content: space-between;
+  width: 90%;
+  min-width: 288px;
   max-width: 330px;
   height: 372px;
-  margin: 150px auto;
+  /* margin: 150px auto; */
   border-radius: 15px;
   background-color: white;
 }
 
 .card__top {
+  position: relative;
   width: 100%;
   height: 130px;
   border-radius: 15px 15px 0 0;
@@ -52,10 +55,10 @@ body {
 }
 
 img {
-  position: relative;
-  display: inline-block;
-  bottom: 55px;
-  left: 115px;
+  position: absolute;
+  /* display: inline-block; */
+  bottom: -52.5px;
+  left: calc(50% - 52.5px);
   width: 105px;
   height: 105px;
   border: 5px solid white;
@@ -64,39 +67,42 @@ img {
 }
 
 .profile {
-  position: relative;
-  bottom: 40px;
+  position: absolute;
+  top: calc(60% - 34px);
   display: flex;
-  flex-direction: column;
-  width: 150px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 68px;
   text-align: center;
-  margin: auto;
+  /* padding: 52.5px 0; */
 }
 
-.profile .profile-title {
+/* .profile .profile-title {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin-top: 3px;
-}
+} */
 
-.profile .profile__name {
-  display: inline-block;
+.profile h2 {
   font-size: var(--fs-primary);
   font-weight: bold;
   padding: 5px;
   color: var(--color-dark-des-blue);
 }
 
-.profile .profile__age {
+.profile h2 span {
   display: inline-block;
   padding: 5px;
   font-size: var(--fs-primary);
   color: var(--color-dark-gray-blue);
 }
 
-.profile .profile__location {
+.profile p {
+  display: block;
+  width: 100%;
   font-size: calc(var(--fs-primary) - 0.4rem);
   color: var(--color-dark-gray-blue);
   padding: 7px;
